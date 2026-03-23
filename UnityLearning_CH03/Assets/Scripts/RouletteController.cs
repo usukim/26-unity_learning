@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class RouletteController : MonoBehaviour
 {
-    float rotSpeed = 0.0f;
+    float startSpeed = 30f;
+    float decreaseRatio = 0.99f;
+
+    float rotSpeed = 0f;
     void Start()
     {
         Application.targetFrameRate = 60;
@@ -10,11 +13,13 @@ public class RouletteController : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            this.rotSpeed += 0.1f;
+            this.rotSpeed = startSpeed;
         }
 
         transform.Rotate(0, 0, rotSpeed);
+
+        this.rotSpeed *= decreaseRatio;
     }
 }
