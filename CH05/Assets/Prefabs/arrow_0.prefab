@@ -104,4 +104,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfad5b4e1470a144a6fed5b3c1bb04c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowController
-  dropSpeed: 0.1
+  player: {fileID: 0}
+  dropSpeed: 5

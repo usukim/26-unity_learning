@@ -21,4 +21,12 @@ public class PlayerController : MonoBehaviour
             transform.Translate(speed * Time.deltaTime, 0, 0);
         }
     }
+    public void LButtonDown()
+    {
+        transform.Translate(-speed * Time.deltaTime * 2f, 0, 0);
+    }
+    public void RButtonDown()
+    {
+        transform.Translate(speed * Time.deltaTime * 2f, 0, 0);
+    }
 }
