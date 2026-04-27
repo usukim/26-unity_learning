@@ -8,19 +8,20 @@ public class PlayerController : MonoBehaviour
     public float maxWalkSpeed = 1f;
 
     public Sprite[] walkSprites;
-    public float animationPeriod = 0.1f;
+    public Sprite jumpSprite;
+    public float animationPeriod = 0.2f;
 
     float time = 0;
-    int idx = 0;
     SpriteRenderer sr;
-
     Rigidbody2D rb;
+    Animator anim;
 
     void Start()
     {
         Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -36,15 +37,34 @@ public class PlayerController : MonoBehaviour
         }
 
         time += Time.deltaTime;
-        if(time > animationPeriod)
+
+        if (rb.linearVelocityY != 0)
         {
-            time = 0;
-            sr.sprite = walkSprites[idx];
-            idx += 1;
-            if (idx > 8)
-            {
-                idx = 0;
-            }
+            anim.SetBool("isJumped", true);
         }
+        else
+        {
+            anim.SetBool("isJumped", false);
+        }
+
+        //if (rb.linearVelocityY != 0)
+        //{
+        //    sr.sprite = jumpSprite;
+        //}
+        //else if (time > animationPeriod)
+        //{
+        //    time = 0;
+        //    sr.sprite = walkSprites[idx];
+        //    idx++;
+        //    if (idx > 1)
+        //    {
+        //        idx = 0;
+        //    }
+        //}
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("¼º°ø");
     }
 }
