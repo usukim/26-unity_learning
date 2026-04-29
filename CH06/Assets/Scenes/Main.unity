@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4059153
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalPosition.y
@@ -202,19 +202,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96592593
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.25881866
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -226,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -658,7 +658,7 @@ Transform:
   m_GameObject: {fileID: 1350269427}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.21, y: -0.69, z: 1}
+  m_LocalPosition: {x: -8.3, y: -0.35, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -713,9 +713,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3036547a8777d0a48a2f7ce004fab9bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  jumpForce: 300
-  walkForce: 30
-  maxWalkSpeed: 0.8
+  jumpForce: 350
+  walkForce: 50
+  maxWalkSpeed: 1
   walkSprites:
   - {fileID: 292310981503173399, guid: 034a84d7081acfb448664619af6092b2, type: 3}
   - {fileID: -7477192630708466740, guid: 0be41bb9a2b80084989f44ce98ae8fa9, type: 3}
@@ -1156,11 +1156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.91
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 4865206467177166042, guid: d467fdaf70ddfd0419c6329f85072046, type: 3}
       propertyPath: m_LocalPosition.z
