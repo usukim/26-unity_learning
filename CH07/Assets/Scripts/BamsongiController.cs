@@ -6,7 +6,7 @@ public class BamsongiController : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
-        Shoot(new Vector3(0, 200.0f, 2000.0f));
+        // Shoot(new Vector3(10.0f, 200.0f, 2000.0f));
     }
 
     // Update is called once per frame
@@ -18,5 +18,11 @@ public class BamsongiController : MonoBehaviour
     public void Shoot(Vector3 dir)
     {
         GetComponent<Rigidbody>().AddForce(dir);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<ParticleSystem>().Play();
     }
 }
