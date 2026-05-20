@@ -6,15 +6,27 @@ public class ItemGenerator : MonoBehaviour
     public GameObject bombPrefab;
 
     public float span = 1f;
+    public int ratio = 3; // 30% bomb ratio
+
     float delta = 0f;
 
     void Update()
     {
         delta += Time.deltaTime;
-        Debug.Log(Time.deltaTime);
+        GameObject item;
         if (delta > span)
         {
-            GameObject item = Instantiate(applePrefab);
+            int dice = Random.Range(0, 10);
+            if (dice < ratio)
+            {
+                item = Instantiate(bombPrefab);
+            }
+            else
+            {
+                item = Instantiate(applePrefab);
+            }
+
+            //GameObject item = Instantiate(applePrefab);
             float x = Random.Range(-1, 2);
             float z = Random.Range(-1, 2);
             item.transform.SetParent(transform);

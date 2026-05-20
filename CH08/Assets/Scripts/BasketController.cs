@@ -1,16 +1,19 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class BasketController : MonoBehaviour
 {
     public AudioClip appleSE;
     public AudioClip bombSE;
 
     AudioSource aud;
+    GameObject director;
 
     void Start()
     {
         Application.targetFrameRate = 60;
         aud = GetComponent<AudioSource>();
+        director = GameObject.Find("GameDirector");
     }
 
     void Update()
@@ -33,11 +36,13 @@ public class BasketController : MonoBehaviour
         if (other.gameObject.tag == "Apple")
         {
             aud.PlayOneShot(appleSE);
+            director.GetComponent<GameDirector>().GetApple();
             Debug.Log("사과를 잡았다");
         }
         else if (other.gameObject.tag == "Bomb")
         {
             aud.PlayOneShot(bombSE);
+            director.GetComponent<GameDirector>().GetBomb();
             Debug.Log("폭탄을 잡았다");
         }
         
